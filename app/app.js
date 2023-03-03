@@ -33,7 +33,7 @@ fetch("https://api.exchangerate.host/latest")
         const toRate = parseFloat(rateinput2.value);
         const euroRate = 1;
         const convertedCurrency = (euroRate/fromRate)*(euroRate/toRate);
-        let convertedvalue = convertedCurrency;
+        let convertedvalue = convertedCurrency.toFixed(4);
         converted.value = convertedvalue;
         }
 
