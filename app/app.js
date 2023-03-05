@@ -3,6 +3,7 @@ let selected2 = document.querySelector("#selected2");
 let rateinput = document.querySelector("#rateinput")
 let rateinput2 = document.querySelector("#rateinput2")
 let converted = document.querySelector("#converted")
+let added = document.querySelector("#added")
 
 fetch("https://api.exchangerate.host/latest")
 .then((resp) => resp.json())
@@ -33,9 +34,12 @@ fetch("https://api.exchangerate.host/latest")
         const toRate = parseFloat(rateinput2.value);
         const euroRate = 1;
         const convertedCurrency = (euroRate/fromRate)*(euroRate/toRate);
-        let convertedvalue = convertedCurrency.toFixed(4);
+        let convertedvalue = convertedCurrency.toFixed(5);
         converted.value = convertedvalue;
         }
+
+
+        
 
 });
 
